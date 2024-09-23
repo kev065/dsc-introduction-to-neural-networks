@@ -74,14 +74,18 @@ Types of neural networks:
 
 ### Problem statement and matrix representation
 
-![title](https://curriculum-content.s3.amazonaws.com/data-science/images/santa.jpg)
+<p align="center">
+  <img src="https://curriculum-content.s3.amazonaws.com/data-science/images/santa.jpg" alt="santa image" />
+</p>
 
 You'll see that there is quite a bit of theory and mathematical notation needed when using neural networks. We'll introduce all this for the first time by using an example.
 Imagine we have a dataset with images. Some of them have Santa in it, others don't. We'll use a neural network to train the model so it can detect whether Santa is in a picture or not.
 
 As mentioned before, this is a kind of problem where the input data is composed of images. Now how does Python read images? To store an image, your computer stores three matrices which correspond with three color channels: red, green, and blue (also referred to as RGB). The numbers in each of the three matrices correspond with the pixel intensity values in each of the three colors. The picture below denotes a hypothetical representation of a 4 x 4 pixel image (note that 4 x 4 is tiny, generally you'll have much bigger dimensions). Pixel intensity values are on the scale [0, 255].
 
-<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/new_rgb.png" width=300>
+<p align="center">
+    <img src="https://curriculum-content.s3.amazonaws.com/data-science/images/new_rgb.png" alt="rgb matrix image", width=300 />
+</p>
 
 Having three matrices associated with one image, we'll need to modify this shape to get to one input feature vector. You'll want to "unrow" your input feature values into one so-called "feature vector". You should start with unrowing the red pixel matrix, then the green one, then the blue one. Unrowing the RGB matrices in the image above would result in:
 
